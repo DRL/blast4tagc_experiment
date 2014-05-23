@@ -16,7 +16,7 @@ class db(object):
 		if (self.found):
 			call(["module load blast"])
 			print call(["blastdbcmd -db" + self.filename + " -info"])
-		except:
+		else:
 			print "Database " + self.filename + " can't be found" 
 
 	def found(self):
